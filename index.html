@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Tool Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#text-to-pdf">Text to PDF</a></li>
+                <li><a href="#image-resizer">Image Resizer</a></li>
+                <li><a href="#units-converter">Units Converter</a></li>
+                <li><a href="#image-compressor">Image Compressor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="text-to-pdf">
+            <h2>Text to PDF Converter</h2>
+            <textarea id="pdf-text" placeholder="Enter your text here..."></textarea>
+            <button onclick="convertToPDF()">Convert to PDF</button>
+        </section>
+        
+        <section id="image-resizer">
+            <h2>Image Resizer</h2>
+            <input type="file" id="image-upload">
+            <input type="number" id="resize-width" placeholder="Width">
+            <input type="number" id="resize-height" placeholder="Height">
+            <button onclick="resizeImage()">Resize & Download</button>
+        </section>
+        
+        <section id="units-converter">
+            <h2>Units Converter</h2>
+            <input type="text" id="unit-input" placeholder="Enter value">
+            <select id="unit-type">
+                <option value="m">Meters</option>
+                <option value="cm">Centimeters</option>
+                <option value="ft">Feet</option>
+            </select>
+            <button onclick="convertUnits()">Convert</button>
+            <p id="unit-output"></p>
+        </section>
+        
+        <section id="image-compressor">
+            <h2>Image Compressor</h2>
+            <input type="file" id="compress-image-upload">
+            <button onclick="compressImage()">Compress & Download</button>
+        </section>
+    </main>
+    
+    <script src="https://unpkg.com/js-quantities@1.4.0"></script>
+    <script src="script.js"></script>
+</body>
+</html>
